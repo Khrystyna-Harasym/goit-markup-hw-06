@@ -41,38 +41,33 @@
         </nav>
         <!--Контакти-->
         <ul class="contact-menu list">
-          <li class="nav-item contact-list ">
-            
+          <li class="nav-item contact-list">
             <a class="mail link-icon link" href="mailto:info@devstudio.com"
               ><svg
-              lang="en"
-              aria-label="mail icon"
-              class="contact-icon"
-              width="16"
-              height="12"
-            >
-              <use href="./images/icons.svg#icon-mail"></use>
-            </svg>
+                lang="en"
+                aria-label="mail icon"
+                class="contact-icon"
+                width="16"
+                height="12"
+              >
+                <use href="./images/icons.svg#icon-mail"></use>
+              </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="nav-item contact-list ">
-            
-            <a
-              class="contact-number link-icon  link"
-              href="tel:+380961111111"
+          <li class="nav-item contact-list">
+            <a class="contact-number link-icon link" href="tel:+380961111111"
               ><svg
-              lang="en"
-              aria-label="smartphone icon"
-              class="contact-icon"
-              width="10"
-              height="16"
-            >
-              <use href="./images/icons.svg#icon-smartphone"></use>
-            </svg>
+                lang="en"
+                aria-label="smartphone icon"
+                class="contact-icon"
+                width="10"
+                height="16"
+              >
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
               +38 096 111 11 11</a
             >
-           
           </li>
         </ul>
       </div>
@@ -83,7 +78,9 @@
       <section class="main-hero">
         <div class="container main-hero-container">
           <h1 class="main-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="modal-open-btn" type="button" data-modal-open>Замовити послугу</button>
+          <button class="modal-open-btn" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
       <!--Особливості-->
@@ -169,7 +166,6 @@
         <div class="container">
           <h2 class="title-section title">Чим ми займаємося</h2>
           <ul class="list work-list">
-           
             <li class="work-card">
               <img
                 src="./images/picture_1.jpg"
@@ -178,7 +174,7 @@
                 height="295"
               />
               <div class="overlay subtitle">
-               <p class="overlay-title">Десктопні додатки</p> 
+                <p class="overlay-title">Десктопні додатки</p>
               </div>
             </li>
             <li class="work-card">
@@ -566,7 +562,7 @@
     <footer class="footer-page">
       <div class="container footer-page-container">
         <!--Перший блок-->
-        <div class="footer-container footer-address-container">
+        <div class="footer-address-container">
           <!--Логотип-->
           <a class="logo-footer link" href="./index.html"
             ><span class="accent">Web</span>studio</a
@@ -654,16 +650,115 @@
             </li>
           </ul>
         </div>
+        <!--Третій блок-->
+        <div class="footer-signup-container">
+          <p class="title-footer subtitle">Підпишіться на розсилку</p>
+          
+            <form class="footer-modal-form">
+              <input
+                class="mail-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+              <button type="submit" class="footer-signup-btn">
+                <span btn-signup-title>Підписатися</span>
+                <svg class="icon-close" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+          
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <!--Модальне вікно-->
+    <div class="backdrop is is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-    </div>
+        <!--Модальна форма-->
+        <p class="modal-form-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Ім'я</span>
+            <span class="modal-form-input-wrapper">
+              <input
+              type="text"
+              class="modal-form-input"
+              pattern="[a-zA-Zа-яА-яіІїЇ]+"
+              name="user_name"
+              required
+            />
+            <svg class="modal-form-icon" >
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+
+          </span>
+            
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Телефон</span>
+            <span class="modal-form-input-wrapper">
+              <input
+              type="tel"
+              class="modal-form-input"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xxx-xxx-xx-xx"
+              name="user_phone"
+              required
+            />
+            <svg class="modal-form-icon" >
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </span>
+           
+
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Пошта</span>
+            <span class="modal-form-input-wrapper">
+              <input
+              type="email"
+              class="modal-form-input"
+              name="user_email"
+              required
+            />
+            <svg class="modal-form-icon" >
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </span>
+            
+
+          </label>
+          <label class="modal-form-field">
+            <span  class="modal-form-field-desc">Коментар</span>
+            <textarea
+              class="modal-form-message"
+              name="user_message"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+
+          <label class="modal-form-check-field">
+            <input
+              type="checkbox"
+              class="modal-form-check"
+              name="user_policy"
+              required
+            />
+            <svg class="modal-form-checkbox" width="16" height="15">
+              <use class="modal-form-checkbox-icon" href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <span class="modal-form-check-policy">Погоджуюся з розсилкою та приймаю</span> &nbsp<a class="modal-link-policy" href="">Умови договору</a>
+          </label>
+          <button type="submit" class="modal-form-submit">Відправити</button>
+        </form>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>

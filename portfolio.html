@@ -308,7 +308,7 @@
     <footer class="footer-page">
       <div class="container footer-page-container">
         <!--Перший блок-->
-        <div class="footer-container footer-address-container">
+        <div class="footer-address-container">
           <!--Логотип-->
           <a class="logo-footer link" href="./index.html"
             ><span class="accent">Web</span>studio</a
@@ -340,7 +340,7 @@
         </div>
         <!--Другий блок-->
         <div class="footer-social-container">
-          <h2 class="title-footer subtitle">Приєднуйтесь</h2>
+          <p class="title-footer subtitle">Приєднуйтесь</p>
           <ul class="list footer-social-list">
             <li>
               <a href="#" class="link footer-social-link"
@@ -395,6 +395,27 @@
               </a>
             </li>
           </ul>
+        </div>
+        <!--Третій блок-->
+        <div class="footer-signup-container">
+          <p class="title-footer subtitle">Підпишіться на розсилку</p>
+          
+            <form class="footer-modal-form">
+              <input
+                class="mail-input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required
+              />
+              <button type="submit" class="footer-signup-btn">
+                <span btn-signup-title>Підписатися</span>
+                <svg class="icon-close" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+          
+          </form>
         </div>
       </div>
     </footer>
